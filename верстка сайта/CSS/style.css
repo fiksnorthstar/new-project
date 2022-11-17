@@ -1,0 +1,984 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Шрифты */
+
+@font-face {
+    font-family: 'MullerBold';
+    src: url(/fonts/MullerBold.woff);
+    src: url(/fonts/MullerBold.woff2);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'MullerLight';
+    src: url(/fonts/MullerLight.woff);
+    src: url(/fonts/MullerLight.woff2);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'MullerMedium';
+    src: url(/fonts/MullerMedium.woff);
+    src: url(/fonts/MullerMedium.woff2);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'MullerRegular';
+    src: url(/fonts/MullerRegular.woff);
+    src: url(/fonts/MullerRegular.woff2);
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    background: #E5E5E5;
+}
+
+/* Работа со всеми контейнерами */
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* Header Верхний блок: контакты, ссылки*/
+
+.vision-hidden {
+    visibility: hidden;
+    margin: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.header {
+    padding-bottom: 70px;
+    padding-top: 30px;
+}
+
+.main-content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-logo {
+    padding-right: 40px;
+}
+
+.header-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: space-between
+}
+
+.header-top-left {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Header - блок навигации*/
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-start;
+
+    background: #FFFFFF;
+    border-radius: 15px;
+
+    padding: 14px 45px;
+}
+
+.header-nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.header-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
+
+.header-list-item:not(:last-child) {
+    margin-right: 45px;
+}
+
+.header-list-item:last-child {
+    margin-right: 56px;
+}
+
+.header-link {
+    text-decoration: none;
+
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+
+    color: #666666;
+
+}
+
+.contacts-link {
+    text-decoration: none;
+
+    font-family: 'MullerMedium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+
+    color: #666666;
+}
+
+.back-link {
+    text-decoration: none;
+
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #CC9933;
+
+    background-image: url(../img/БЭК-МИНИ/keyboard_tab.png);
+    padding-left: 29px;
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 50px;
+    background: #E1E1E1;
+
+    margin-right: 57px;
+}
+
+.bar-button {
+    padding: 13px 20px;
+
+    border: 1px solid #CC9933;
+    border-radius: 10px;
+
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #CC9933;
+
+    background: #FFFFFF;
+}
+
+
+.want-tour {
+    margin-right: 40px;
+}
+
+
+
+
+
+/* Спец. предложения */
+/* Спец. предложения - расстановка блоков*/
+
+.container {
+    margin: 0 auto;
+}
+
+.special-block {
+    display: flex;
+}
+
+.special-block-left {
+    display: flex;
+    flex-direction: column;
+    width: calc((100% + 30px) / 2);
+}
+
+.special-block-left:not(:last-child) {
+    margin-right: 23px;
+}
+
+.list-point:first-child {
+    margin-bottom: 23px;
+}
+
+.big-block {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Спец. предложения - работа в блоках*/
+
+.table-of-contents {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+    padding-left: 40px;
+
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    color: #333333;
+}
+
+.special-offers {
+    padding-bottom: 58px;
+}
+
+/* Спец. предложения - мальдивы*/
+
+.island {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    border-radius: 15px;
+    background-image:
+        linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%),
+        url(../img/БЭК/МальдивскиеОстрова.png);
+
+}
+
+.special-title-island {
+    flex-wrap: wrap;
+
+    padding: 0;
+    margin: 0;
+
+    font-family: 'MullerBold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    color: #FFFFFF;
+
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 234px;
+    margin-bottom: 15px;
+}
+
+.price-island {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #FFFFFF;
+
+    padding-left: 40px;
+    margin-bottom: 47px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.link-island {
+
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFCC66;
+
+    padding-left: 40px;
+    margin-bottom: 40px;
+
+    text-decoration: none;
+
+    background-image: url(../img/БЭК-МИНИ/Rectangle2.png);
+    background-repeat: no-repeat;
+    padding-right: 15px;
+    background-position: right;
+
+}
+
+
+/* Спец. предложения - номера люкс*/
+
+
+
+.room {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    background-image: url(../img/БЭК/Люкс.png);
+    background-repeat: no-repeat;
+
+    border-radius: 17px;
+}
+
+.room-title {
+    font-family: 'MullerBold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 60px;
+
+    color: #FFFFFF;
+
+    padding-top: 200px;
+    padding-left: 40px;
+    padding-right: 234px;
+    padding-bottom: 15px;
+
+}
+
+.price-room {
+    margin: 0;
+
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    color: #FFFFFF;
+
+    padding-left: 40px;
+    padding-bottom: 47px;
+}
+
+.link-room {
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFCC66;
+
+    padding-left: 41px;
+    padding-bottom: 52px;
+
+    text-decoration: none;
+
+    background-image: url(../img/БЭК-МИНИ/Rectangle2.png);
+    background-repeat: no-repeat;
+    padding-right: 15px;
+    background-position: right top;
+
+}
+
+.special-title {
+    margin: 0;
+}
+
+
+/* Спец. предложения - Горящий тур*/
+
+.tour {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url(../img/БЭК/тур.png);
+    background-repeat: no-repeat;
+
+    border-radius: 17px;
+}
+
+.special-title-tour {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'MullerBold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    color: #FFFFFF;
+
+    padding-top: 40px;
+    padding-right: 200px;
+    padding-left: 40px;
+    padding-bottom: 15px;
+}
+
+.price-tour {
+
+    padding: 0;
+    margin: 0;
+
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #FFFFFF;
+
+    padding-left: 40px;
+    padding-bottom: 47px;
+}
+
+.link-tour {
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFCC66;
+
+    padding-left: 40px;
+    margin-bottom: 40px;
+
+    text-decoration: none;
+
+    background-image: url(../img/БЭК-МИНИ/Rectangle2.png);
+    background-repeat: no-repeat;
+    padding-right: 15px;
+    background-position: right;
+
+}
+
+
+
+
+
+
+
+
+
+/* О нас */
+
+.about-us {
+    display: inline-block;
+
+    margin-bottom: 70px;
+}
+
+.about-us-head {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    color: #333333;
+
+    padding-left: 40px;
+}
+
+.about-us-text {
+    padding: 0;
+    margin: 0;
+
+    padding-top: 11px;
+
+    max-width: 888px;
+
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+    color: #000000;
+}
+
+
+
+
+
+/* Услуги */
+.services-block {
+    margin-bottom: 70px;
+}
+
+.services-item {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    color: #333333;
+
+    padding-left: 40px;
+}
+
+
+.service-item-cards {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+
+    background: #FFFFFF;
+    border-radius: 15px 15px;
+
+    max-width: 572px;
+
+    padding-top: 191px;
+
+    margin-bottom: 23px;
+}
+
+
+.service-link {
+    display: flex;
+    text-decoration: none;
+}
+
+.service-title {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'MullerMedium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 200%;
+    color: #CC9933;
+
+    background-image: url(../img/БЭК-МИНИ/Rectangle2.png);
+    padding-left: 45px;
+    background-repeat: no-repeat;
+    background-position: center right;
+
+    padding-right: 20px;
+}
+
+.service-text {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+    color: #000000;
+
+    max-width: 450px;
+
+    padding-left: 45px;
+    padding-bottom: 50px;
+    margin-right: 126px;
+}
+
+/* Услуги - иллюстрации*/
+.exclusive-service {
+    background-image: url(../img/bokal.png);
+    background-repeat: no-repeat;
+
+}
+
+.gym {
+    background-image: url(../img/gym.png);
+    background-repeat: no-repeat;
+
+}
+
+.banqueting-hall {
+    background-image: url(../img/food-room.png);
+    background-repeat: no-repeat;
+
+}
+
+.car-parking {
+    background-image: url(../img/car.png);
+    background-repeat: no-repeat;
+
+}
+
+
+
+
+
+
+/* Блок преимущества */
+
+.advantages {
+    margin: 0;
+    padding: 0;
+
+    margin-bottom: 70px;
+}
+
+.advantages-item {
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+    padding-bottom: 30px;
+
+
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    color: #333333;
+}
+
+.advantages-list-cards {
+    margin: 0;
+    padding: 0;
+
+    background: #FFFFFF;
+    border-radius: 15px;
+
+    max-width: 275px;
+}
+
+
+
+
+
+
+.bath {
+    background-image: url(../img/1.png);
+    background-repeat: no-repeat;
+
+    background-position: 45px 40px;
+
+}
+
+.hanger {
+    background-image: url(../img/2.png);
+    background-repeat: no-repeat;
+
+    background-position: 45px 40px;
+}
+
+.radiator {
+    background-image: url(../img/3.png);
+    background-repeat: no-repeat;
+
+    background-position: 45px 40px;
+}
+
+.pen {
+    background-image: url(../img/4.png);
+    background-repeat: no-repeat;
+
+    background-position: 45px 40px;
+}
+
+.parking {
+    background-image: url(../img/5.png);
+    background-repeat: no-repeat;
+
+    background-position: 45px 40px;
+}
+
+.call {
+    background-image: url(../img/6.png);
+    background-repeat: no-repeat;
+
+    background-position: 45px 40px;
+}
+
+.safe {
+    background-image: url(../img/7.png);
+    background-repeat: no-repeat;
+
+    background-position: 45px 40px;
+}
+
+.pool {
+    background-image: url(../img/8.png);
+    background-repeat: no-repeat;
+
+    background-position: 45px 40px;
+}
+
+
+
+/* Блок преимущества  - работа с блоками*/
+
+.advantages-list {
+
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+
+.advantages-cards-text {
+
+    padding: 0;
+    margin: 0;
+
+    padding-top: 116px;
+    padding-left: 45px;
+
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+    color: #000000;
+
+    padding-bottom: 41px;
+
+    margin-right: 42px;
+}
+
+.advantages-list-cards:nth-child(-n +4) {
+    margin-bottom: 23px;
+}
+
+
+
+/* Размещение. Выбор отелей */
+
+.location-head {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    color: #333333;
+
+    padding-left: 40px;
+    padding-bottom: 30px;
+}
+
+.location-cards-list {
+    margin: 0;
+    padding: 0%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    list-style-type: none;
+}
+
+.location-cards-point {
+    background: #FFFFFF;
+    border-radius: 15px;
+
+    width: 374px;
+}
+
+
+.location-cards-point:nth-child(-n+6) {
+    margin-bottom: 23px;
+}
+
+.location-cards-point:nth-child(-n+2) {
+    margin-right: 23px;
+}
+
+.location-cards-point:nth-child(n+4):nth-child(-n+5) {
+    margin-right: 23px;
+}
+
+.location-cards-point:nth-child(n+7):nth-child(-n+8) {
+    margin-right: 23px;
+}
+
+
+.location-price {
+    padding: 0;
+    margin: 0;
+
+    padding-top: 36px;
+    padding-left: 45px;
+}
+
+.location-inf {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.location-text {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Muller';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000000;
+
+    padding-top: 16px;
+    padding-left: 45px;
+}
+
+
+.location-on-map {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Muller';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #999999;
+
+    padding-top: 16px;
+    padding-left: 45px;
+    padding-bottom: 20px;
+}
+
+.booking-container {
+    padding-left: 45px;
+    padding-bottom: 41px;
+}
+
+.booking {
+
+    padding: 0;
+    margin: 0;
+
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+
+    color: #CC9933;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #CC9933;
+    border-radius: 10px;
+
+    padding: 13px 20px;
+}
+
+.price-estimate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rating {
+    padding-left: 43px;
+    padding-top: 39px;
+}
+
+.show-more {
+    background-image: url(../img/otel-more-b.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.help-show-more-link {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 54px;
+    padding-top: 373px;
+    /* padding-right: 10px; */
+
+    padding-bottom: 27px;
+}
+
+.show-more-link {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: 'MullerMedium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 200%;
+    color: #FFFFFF;
+
+    padding-right: 20px;
+
+    background-image: url(../img/БЭК-МИНИ/Rectangle2wite.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+
+    text-decoration: none;
+}
+
+.location-cards {
+    margin-bottom: 70px;
+}
+
+.first-part {
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #999999;
+}
+
+.second-part {
+    font-family: 'MullerBold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.third-part {
+    font-family: 'MullerRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000000;
+}
